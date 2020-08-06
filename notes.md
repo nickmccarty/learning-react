@@ -27,19 +27,19 @@
 
 * Function expressions are simply functions created as variables, such as tht shown below (see console in DevTools for output):
 
-```const logCompliment = function() {
+`const logCompliment = function() {
     
   console.log("You're doing great!");
     
 };
 
-logCompliment();```
+logCompliment();`
 
 * Function declarations are hoisted and function expressions are not
     * In other words, you can invoke a function before you write a function declaration
     * You cannot invoke a function created by a function expression, as it will cause an error (see example below):
     
-```// Invoking the function before it's declared
+`// Invoking the function before it's declared
 
 hey();
 
@@ -51,11 +51,11 @@ function hey() {
     
 }
 
-// Alert pops up, as intended```
+// Alert pops up, as intended`
 
 Alternatively, and ineffectually:
 
-```// Invoking the function before it's declared
+`// Invoking the function before it's declared
 
 hey();
 
@@ -65,7 +65,7 @@ const hey = function() {
     
   alert("hey!");
     
-};```
+};`
 
 // Errors ensue
 
