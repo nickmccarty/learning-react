@@ -73,8 +73,7 @@ const hey = function() {
 };
 
 // Errors ensue
-```
-```
+
 Javascript error adding output!
 ReferenceError: Cannot access 'hey' before initialization
 See your browser Javascript console for more details.
