@@ -194,3 +194,35 @@ var add = function add() {
 ```
 
 Babel added a “use strict” declaration to run in strict mode. The variables x and y are defaulted using the arguments array, a technique you may be familiar with. The resulting JavaScript is more widely supported.
+
+### Simple Promises with `.fetch()`
+
+Let’s get some dummy data from the randomuser.me API:
+
+```
+console.log(fetch("https://api.randomuser.me/?nat=US&results=1"));
+```
+
+When we log this, we see that there is a pending promise. Promises give us a way to make sense out of asynchronous behavior in JavaScript. The promise is an object that represents whether the async operation is pending, has been completed, or has failed.
+
+The pending promise represents a state before the data has been fetched. We need to chain on a function called `.then()`. This function will take in a callback function that will run if the previous operation was successful.
+
+The something else we want to do is turn the response into JSON:
+
+```
+fetch("https://api.randomuser.me/?nat=US&results=1").then(res =>
+  console.log(res.json())
+);
+```
+
+The `then` method will invoke the callback function once the promise has resolved. Whatever you return from this function becomes the argument of the next then function. So we can chain together then functions to handle a promise that has been successfully resolved:
+
+```
+fetch("https://api.randomuser.me/?nat=US&results=1")
+  .then(res => res.json())
+  .then(json => json.results)
+  .then(console.log)
+  .catch(console.error);
+```
+
+First, we use fetch to make a GET request to randomuser.me. If the request is successful, we’ll then convert the response body to JSON. Next, we’ll take the JSON data and return the results, then we’ll send the results to the console.log function, which will log them to the console. Finally, there is a catch function that invokes a callback if the fetch did not resolve successfully. Any error that occurred while fetching data from randomuser.me will be based on that callback. Here, we simply log the error to the console using `console.error`.
