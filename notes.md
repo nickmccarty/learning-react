@@ -168,3 +168,29 @@ tahoe.print(); // Uncaught TypeError: Cannot read property 'join' of undefined
 ```
 
 Changing the print function to an arrow function means that `this` is actually the window.
+
+### Compiling JavaScript
+
+Babel made it possible to use the latest features of JavaScript right away by compiling our code into syntax that can be interpreted by a wider range of browsers.
+
+As an example, let’s look at an arrow function with some default arguments:
+
+```
+const add = (x = 5, y = 10) => console.log(x + y);
+```
+
+If we run Babel on this code, it will generate the following:
+
+```
+"use strict";
+
+var add = function add() {
+  var x =
+    arguments.length <= 0 || arguments[0] === undefined ? 5 : arguments[0];
+  var y =
+    arguments.length <= 1 || arguments[1] === undefined ? 10 : arguments[1];
+  return console.log(x + y);
+};
+```
+
+Babel added a “use strict” declaration to run in strict mode. The variables x and y are defaulted using the arguments array, a technique you may be familiar with. The resulting JavaScript is more widely supported.
