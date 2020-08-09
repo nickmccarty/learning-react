@@ -226,3 +226,35 @@ fetch("https://api.randomuser.me/?nat=US&results=1")
 ```
 
 First, we use fetch to make a GET request to randomuser.me. If the request is successful, we’ll then convert the response body to JSON. Next, we’ll take the JSON data and return the results, then we’ll send the results to the console.log function, which will log them to the console. Finally, there is a catch function that invokes a callback if the fetch did not resolve successfully. Any error that occurred while fetching data from randomuser.me will be based on that callback. Here, we simply log the error to the console using `console.error`.
+
+### `.async()`/`await`
+
+Another popular approach for handling promises is to create an `async` function. Some developers prefer the syntax of `async` functions because it looks more familiar, like code that’s found in a synchronous function. Instead of waiting for the results of a promise to resolve and handling it with a chain of then functions, `async` functions can be told to wait for the promise to resolve before further executing any code found in the function.
+
+Let’s make another API request but wrap the functionality with an `async` function:
+
+```
+const getFakePerson = async () => {
+  let res = await fetch("https://api.randomuser.me/?nat=US&results=1");
+  let { results } = res.json();
+  console.log(results);
+};
+
+getFakePerson();
+```
+
+Notice that the getFakePerson function is declared using the `async` keyword. This makes it an asynchronous function that can wait for promises to resolve before executing the code any further. The `await` keyword is used before promise calls. This tells the function to wait for the promise to resolve. The code below, therefore, accomplishes the exact same task as the code in the previous section that uses `then` functions.
+
+```
+const getFakePerson = async () => {
+  try {
+    let res = await fetch("https://api.randomuser.me/?nat=US&results=1");
+    let { results } = res.json();
+    console.log(results);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+getFakePerson();
+```
