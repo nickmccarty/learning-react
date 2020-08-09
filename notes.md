@@ -113,3 +113,58 @@ console.log(person("Flad", "Hanson"));
 ```
 
 These missing parentheses are the source of countless bugs in JavaScript and React apps, so it’s important to remember this one!
+
+### Arrow Functions and Scope
+
+Regular functions do not block `this`. For example, `this` becomes something else in the setTimeout callback, not the tahoe object:
+
+```
+const tahoe = {
+  mountains: ["Freel", "Rose", "Tallac", "Rubicon", "Silver"],
+  print: function(delay = 1000) {
+    setTimeout(function() {
+      console.log(this.mountains.join(", "));
+    }, delay);
+  }
+};
+
+tahoe.print(); // Uncaught TypeError: Cannot read property 'join' of undefined
+```
+
+This error is thrown because it’s trying to use the .join method on what `this` is. If we log `this`, we’ll see that it refers to the Window object:
+
+```
+console.log(this); // Window {}
+```
+
+To solve this problem, we can use the arrow function syntax to protect the scope of `this`:
+
+```
+const tahoe = {
+  mountains: ["Freel", "Rose", "Tallac", "Rubicon", "Silver"],
+  print: function(delay = 1000) {
+    setTimeout(() => {
+      console.log(this.mountains.join(", "));
+    }, delay);
+  }
+};
+
+tahoe.print(); // Freel, Rose, Tallac, Rubicon, Silver
+```
+
+This works as expected, and we can .join the resorts with a comma. Be careful that you’re always keeping scope in mind. Arrow functions do not block off the scope of `this`:
+
+```
+const tahoe = {
+  mountains: ["Freel", "Rose", "Tallac", "Rubicon", "Silver"],
+  print: (delay = 1000) => {
+    setTimeout(() => {
+      console.log(this.mountains.join(", "));
+    }, delay);
+  }
+};
+
+tahoe.print(); // Uncaught TypeError: Cannot read property 'join' of undefined
+```
+
+Changing the print function to an arrow function means that `this` is actually the window.
