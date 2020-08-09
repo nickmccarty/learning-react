@@ -292,3 +292,39 @@ getPeople(5)
 # [Chapter 3](https://learning.oreilly.com/library/view/learning-react-2nd/9781492051718/ch03.html) ([Code](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-03))
 
 ## Key Takeaways:
+
+# [Chapter 4](https://learning.oreilly.com/library/view/learning-react-2nd/9781492051718/ch04.html) ([Code](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-04))
+
+## Key Takeaways:
+
+# [Chapter 5](https://learning.oreilly.com/library/view/learning-react-2nd/9781492051718/ch05.html) ([Code](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-05))
+
+## Key Takeaways:
+
+# [Chapter 6](https://learning.oreilly.com/library/view/learning-react-2nd/9781492051718/ch06.html) ([Code](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-06))
+
+## Key Takeaways:
+
+# [Chapter 7](https://learning.oreilly.com/library/view/learning-react-2nd/9781492051718/ch07.html) ([Code](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-07))
+
+## Key Takeaways:
+
+# [Chapter 8](https://learning.oreilly.com/library/view/learning-react-2nd/9781492051718/ch08.html) ([Code](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-08))
+
+## Key Takeaways:
+
+# [Chapter 9](https://learning.oreilly.com/library/view/learning-react-2nd/9781492051718/ch09.html) ([Code](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-09))
+
+## Key Takeaways:
+
+# [Chapter 10](https://learning.oreilly.com/library/view/learning-react-2nd/9781492051718/ch10.html) ([Code](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-10))
+
+## Key Takeaways:
+
+# [Chapter 11](https://learning.oreilly.com/library/view/learning-react-2nd/9781492051718/ch11.html) ([Code](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-11))
+
+## Key Takeaways:
+
+# [Chapter 12](https://learning.oreilly.com/library/view/learning-react-2nd/9781492051718/ch12.html) ([Code](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-12))
+
+## Key Takeaways:
