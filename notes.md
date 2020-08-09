@@ -80,3 +80,36 @@ See your browser Javascript console for more details.
 ```
 
 TypeErrors and ReferenceErrors can arise when importing files and functions in a project. If you see it, you can always refactor as a declaration.
+
+### Returning Objects
+
+Consider a function called person that builds an object based on parameters passed in for firstName and lastName:
+
+```
+const person = (firstName, lastName) =>
+    {
+        first: firstName,
+        last: lastName
+    }
+
+console.log(person("Brad", "Janson"));
+```
+
+As soon as you run this, you’ll see the error:
+
+```
+Uncaught SyntaxError: Unexpected token :
+```
+
+To fix this, just wrap the object you’re returning with parentheses:
+
+```
+const person = (firstName, lastName) => ({
+  first: firstName,
+  last: lastName
+});
+
+console.log(person("Flad", "Hanson"));
+```
+
+These missing parentheses are the source of countless bugs in JavaScript and React apps, so it’s important to remember this one!
