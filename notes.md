@@ -288,3 +288,7 @@ getPeople(5)
   .catch(error => console.error(`getPeople failed: ${error.message}`))
 );
 ```
+
+# [Chapter 3](https://learning.oreilly.com/library/view/learning-react-2nd/9781492051718/ch03.html) ([Code](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-03))
+
+## Key Takeaways:
