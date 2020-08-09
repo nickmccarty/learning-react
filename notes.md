@@ -258,3 +258,33 @@ const getFakePerson = async () => {
 
 getFakePerson();
 ```
+
+### Building Promises
+
+When making an asynchronous request, one of two things can happen: everything goes as we hope, or there’s an error. There can be many different types of successful or unsuccessful requests. For example, we could try several ways to obtain the data to reach success. We could also receive multiple types of errors. Promises give us a way to simplify back to a simple pass or fail.
+
+The getPeople function returns a new promise. The promise makes a request to the API. If the promise is successful, the data will load. If the promise is unsuccessful, an error will occur:
+
+```
+const getPeople = count =>
+  new Promise((resolves, rejects) => {
+    const api = `https://api.randomuser.me/?nat=US&results=${count}`;
+    const request = new XMLHttpRequest();
+    request.open("GET", api);
+    request.onload = () =>
+      request.status === 200
+        ? resolves(JSON.parse(request.response).results)
+        : reject(Error(request.statusText));
+    request.onerror = err => rejects(err);
+    request.send();
+  });
+```
+
+With that, the promise has been created, but it hasn’t been used yet. We can use the promise by calling the getPeople function and passing in the number of members that should be loaded. The `then` function can be chained on to do something once the promise has been fulfilled. When a promise is rejected, any details are passed back to the `catch` function, or the `catch` block if using async/await syntax:
+
+```
+getPeople(5)
+  .then(members => console.log(members))
+  .catch(error => console.error(`getPeople failed: ${error.message}`))
+);
+```
