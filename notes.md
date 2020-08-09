@@ -1,6 +1,3 @@
-# Table of Contents
-* [Purpose](https://github.com/nickmccarty/learning-react/notes.md#Chapter&3)
-
 # [Chapter 1](https://learning.oreilly.com/library/view/learning-react-2nd/9781492051718/ch01.html) ([Code](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-01))
 
 ## Key Takeaways:
