@@ -1,4 +1,4 @@
-# [Chapter 1](https://learning.oreilly.com/library/view/learning-react-2nd/9781492051718/ch01.html) ([GH Repo](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-01))
+# [Chapter 1](https://learning.oreilly.com/library/view/learning-react-2nd/9781492051718/ch01.html) ([Code](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-01))
 
 ## Key Takeaways:
 
@@ -11,7 +11,7 @@
 * Hooks allow for the adding and sharing of stateful logic across components
 * Suspense offers a way to optimize asynchronous rendering with React
 
-# [Chapter 2](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-02) ([GH Repo](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-02))
+# [Chapter 2](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-02) ([Code](https://github.com/MoonHighway/learning-react/tree/second-edition/chapter-02))
 
 ## Key Takeaways:
 
